@@ -1,0 +1,17 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0px;
+  }
+  
+  mat-form-field {
+    width: 500px;
+    padding: 0px 15px;
+  }
+  
+  .action {
+    justify-content: space-around;
+  }
+  .action-button{
+      width:40%;
+  }

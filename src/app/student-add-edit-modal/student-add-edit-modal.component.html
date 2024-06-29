@@ -1,0 +1,68 @@
+<div mat-dialog-title>
+    <h1>Student Form</h1>
+  </div>
+  
+  <form [formGroup]="studentForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content class="content">
+      <mat-form-field appearance="outline">
+        <mat-label>Roll Number</mat-label>
+  
+        <input matInput formControlName="rollNo" required />
+        <mat-error *ngIf="studentForm.controls['rollNo'].invalid">
+          Roll Number required
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Branch</mat-label>
+        <input matInput formControlName="branch" required />
+  
+        <mat-error *ngIf="studentForm.controls['branch'].invalid">
+          Branch required
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Full Name</mat-label>
+        <input matInput formControlName="fullName" required />
+        <mat-error *ngIf="studentForm.controls['fullName'].invalid">
+          Full Name required
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" required />
+        <mat-error *ngIf="studentForm.controls['email'].invalid">
+          Email required
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input matInput formControlName="phoneNumber" required />
+        <mat-error *ngIf="studentForm.controls['phoneNumber'].invalid">
+          Phone Number required
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div mat-dialog-actions class="action">
+      <button
+        mat-raised-button
+        class="action-button"
+        type="reset"
+        (click)="onCloseClick()"
+      >
+        Close
+      </button>
+  
+      <button
+        mat-raised-button
+        class="action-button"
+        color="primary"
+        type="submit"
+      >
+        {{ data ? "Update" : "Save" }}
+      </button>
+    </div>
+  </form>
