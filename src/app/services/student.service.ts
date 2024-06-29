@@ -6,7 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class StudentService {
-  private apiUrl = '/api/student';
+  // Change the api url to localhost:8080 for windows testing only if not don't change this variable
+  private apiUrl = '/api/student';  // for ubuntu
+  // private apiUrl = 'http://localhost:8080/api/student'; // for windows 
 
   constructor(private http: HttpClient) {}
 
